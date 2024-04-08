@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserFragment">
+
+    <TextView
+        android:id="@+id/tvAddUserHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="ADD USER"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="36sp" />
+
+    <!-- Full Name EditText -->
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddUserHeading"
+        android:layout_marginTop="24dp"
+        android:hint="Full Name"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="text" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etFullName"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textEmailAddress" />
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Phone Number"
+        android:inputType="phone" />
+
+    <!-- Gender Radio Buttons -->
+    <RadioGroup
+        android:id="@+id/rbGenderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPhoneNumber"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/black"/>
+    </RadioGroup>
+
+    <!-- Role Spinner -->
+    <Spinner
+        android:id="@+id/spinnerRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rbGenderGroup"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:layout_marginTop="16dp" />
+
+    <!-- OK Button -->
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="OK" />
+</RelativeLayout>
